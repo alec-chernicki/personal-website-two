@@ -5,7 +5,7 @@ import styles from './UIImage.css';
 class UIImage extends React.Component {
   render () {
     return (
-      <img styleName="image" {...this.props} />
+      <img styleName="image" {...this.props} alt={this.props.alt} />
     );
   }
 }
