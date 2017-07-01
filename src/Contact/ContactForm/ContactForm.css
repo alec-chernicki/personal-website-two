@@ -1,0 +1,17 @@
+.contact-form {
+
+}
+
+.input {
+  border: none;
+  border-bottom: solid 1px #DFE6EB;
+  width: 100%;
+  padding-bottom: 7px;
+  font-family: 'mr-eaves-sans', sans-serif;
+  outline: none;
+  font-size: 20px;
+}
+
+.control {
+  margin-bottom: 25px;
+}

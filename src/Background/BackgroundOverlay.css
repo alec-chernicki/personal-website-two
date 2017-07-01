@@ -1,0 +1,49 @@
+.background-overlay {
+  position: fixed;
+  z-index: 100000;
+  left: 50px;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  overflow: hidden;
+}
+
+.panel {
+  flex-grow: 2;
+  border-left: solid 1px #DFE6EB;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.panel:after {
+ content: '';
+ position: absolute;
+ top: 0;
+ left: 0;
+ bottom: 0;
+ right: 0;
+ background-color: #FFF;
+}
+
+.panel-wrapper {
+}
+
+.enter .panel:after{
+  transform: translateX(-100%);
+}
+
+.enter.enter-active  .panel:after{
+  transform: translateX(0.01%);
+  transition: transform 300ms ease-out;
+}
+
+.leave  .panel:after{
+  transform: translateX(0.01%);
+}
+
+.leave.leave-active .panel:after {
+  transform: translateX(-100%);
+  transition: transform 300ms ease-out;
+}

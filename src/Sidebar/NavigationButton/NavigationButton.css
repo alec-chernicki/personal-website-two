@@ -1,0 +1,46 @@
+.navigation-button {
+  cursor: pointer;
+  height: 60px;
+  width: 60px;
+  background-color: #6B7F5B;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: all 300ms ease-out;
+}
+
+.navigation-button:hover {
+  background-color: #566649;
+}
+
+.line {
+  width: 50%;
+  margin: 6% 0;
+  height: 1px;
+  transition: all 300ms ease-out;
+  background-color: #FFF;
+}
+
+.line-one,
+.line-two,
+.line-three {
+  composes: line;
+}
+
+.line-one-active {
+  composes: line;
+  transform: translate(3px, -2px) rotate(45deg);
+  transform-origin: 0% 0%;
+}
+
+.line-two-active {
+  composes: line;
+  opacity:0;
+}
+
+.line-three-active {
+  composes: line;
+  transform: translate(3px, 2px) rotate(-45deg);
+  transform-origin: 0% 0%;
+}

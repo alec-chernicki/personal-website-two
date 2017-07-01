@@ -1,0 +1,8 @@
+.text-effect-outer {
+  display: block;
+  overflow: hidden;
+}
+
+.text-effect-inner {
+  display: block;
+}

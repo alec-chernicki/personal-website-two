@@ -1,0 +1,43 @@
+.navigation {
+  position: fixed;
+  top: 0;
+  left: 50px;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  z-index: 10000000;
+}
+
+.link {
+  list-style: none;
+  display: block;
+}
+
+.link + .link {
+  margin-top: 30px;
+}
+
+.link-mask {
+  overflow: hidden;
+  width: 0;
+  position: absolute;
+  left: 0;
+  color: #6B7F5B;
+  transition: all 300ms ease-out;
+}
+
+.link:hover .link-mask{
+  width: 100%;
+}
+
+.link a {
+  text-decoration: none;
+  color: #25292D;
+  font-family: 'Cardo', serif;
+  font-size: 100px;
+  letter-spacing: 4px;
+  font-weight: bold;
+  position: relative;
+  line-height: 1;
+}

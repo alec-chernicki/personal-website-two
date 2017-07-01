@@ -1,0 +1,8 @@
+.social-links {
+  align-self: flex-end;
+}
+
+.social-icon {
+  display: block;
+  margin-bottom: 15px;
+}

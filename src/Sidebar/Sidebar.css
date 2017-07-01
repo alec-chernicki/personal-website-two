@@ -1,0 +1,43 @@
+.logo {
+  height: 60px;
+  width: 60px;
+  background-color: #566649;
+
+  /*background-color: #FFF;*/
+  /*border: solid 1px #DFE6EB;*/
+
+  padding: 15px;
+}
+
+.logo img {
+  transition: transform 300ms ease-out;
+}
+
+.logo:hover img {
+  transform: scale(1.15);
+}
+
+.buttons {
+  position: absolute;
+  cursor: pointer;
+  height: 60px;
+  width: 120px;
+  display: flex;
+  top: 30px;
+  left: 30px;
+  z-index: 10000000000;
+}
+
+.sidebar {
+  position: fixed;
+  left: 0;
+  display: flex;
+  top: 0;
+  bottom: 0;
+  width: 50px;
+  padding: 25px 0;
+  background-color: #FFF;
+  align-items: flex-end;
+  justify-content: center;
+  z-index: 100000000;
+}

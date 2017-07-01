@@ -1,0 +1,17 @@
+.flex-row {
+  display: flex;
+  width: 100%;
+  position: relative;
+}
+
+.align-flex-start {
+  align-items: flex-start;
+}
+
+.align-flex-end {
+  align-items: flex-end;
+}
+
+.align-center {
+  align-items: center;
+}
