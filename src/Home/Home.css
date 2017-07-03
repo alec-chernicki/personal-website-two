@@ -3,6 +3,7 @@
   align-items: center;
   display: flex;
   overflow: hidden;
+  position: relative;
 }
 
 .hero-image {
@@ -18,10 +19,16 @@
   left: 0;
   top: 0;
   bottom: 0;
-  width: calc((1/4) * 100%);
+  width: calc((1/7) * (100vw - 50px));
   background-color: #6B7F5B;
   z-index: 100;
   mix-blend-mode: multiply;
+}
+
+@media only screen and (max-width : 768px) {
+  .hero-accent {
+    opacity: 0;
+  }
 }
 
 .buttons {
@@ -29,6 +36,28 @@
   margin-top: 40px;
 }
 
-.hidden {
+@media only screen and (max-width : 768px) {
+  .about-button {
+    display: none;
+  }
+}
+
+.content-container {
+  position: relative;
+  z-index: 100;
+}
+
+.background-container {
   overflow: hidden;
+  left: calc((3/7) * (100vw - 50px));
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+@media only screen and (max-width : 768px) {
+  .background-container {
+    left: 0;
+    opacity: 0.6;
+  }
 }

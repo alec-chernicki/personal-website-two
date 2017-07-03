@@ -9,6 +9,12 @@
   z-index: 10000000;
 }
 
+@media only screen and (max-width : 768px) {
+  .navigation {
+    left: 15px;
+  }
+}
+
 .link {
   list-style: none;
   display: block;
@@ -40,4 +46,10 @@
   font-weight: bold;
   position: relative;
   line-height: 1;
+}
+
+@media only screen and (max-width : 768px) {
+  .link a {
+    font-size: 70px;
+  }
 }

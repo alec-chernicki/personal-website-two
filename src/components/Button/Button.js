@@ -14,7 +14,7 @@ const buttonUses = {
 
 class Button extends React.Component {
   render () {
-    const {to, use, children, type} = this.props;
+    const {to, use, children, type, className} = this.props;
 
     const buttonClass = classNames({
       'button-primary': use === buttonUses.primary,
@@ -31,14 +31,14 @@ class Button extends React.Component {
 
     if (type === 'submit') {
       return (
-        <button {...propsToPass} styleName={buttonClass}>
+        <button {...propsToPass} className={className} styleName={buttonClass}>
           {children}
         </button>
       )
     }
 
     return (
-      <Link {...propsToPass} styleName={buttonClass} to={to}>
+      <Link {...propsToPass} className={className} styleName={buttonClass} to={to}>
         {children}
       </Link>
     );

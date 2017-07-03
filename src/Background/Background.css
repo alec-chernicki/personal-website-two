@@ -9,6 +9,12 @@
   display: flex;
 }
 
+@media only screen and (max-width : 768px) {
+  .background {
+    left: 0;
+  }
+}
+
 .panel {
   flex-grow: 2;
   border-left: solid 1px #363A3E;

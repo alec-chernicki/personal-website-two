@@ -11,7 +11,7 @@ const Content = (props) => {
   return (
     <div>
       <FlexRow>
-        <FlexItem size={5} offset={1}>
+        <FlexItem size={5} sizeSm={7} offset={1} offsetSm={0}>
           <UIFadeIn>
             <UIImage src="https://unsplash.it/1200/700/?random" />
           </UIFadeIn>
@@ -19,7 +19,7 @@ const Content = (props) => {
       </FlexRow>
 
       <FlexRow>
-        <FlexItem size={5} offset={1}>
+        <FlexItem size={5} sizeSm={7} offset={1} offsetSm={0}>
           <UIFadeIn>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vel
@@ -41,7 +41,7 @@ const Content = (props) => {
       </FlexRow>
 
       <FlexRow>
-        <FlexItem size={5} offset={1}>
+        <FlexItem size={5}  sizeSm={7} offset={1} offsetSm={0}>
           <UIFadeIn>
             <UIImage src="https://unsplash.it/1200/701/?random" />
           </UIFadeIn>

@@ -52,12 +52,13 @@ class WorkPage extends React.Component {
     const Content = item.content;
 
     return (
-      <ScrollArea smoothScrolling={true}>
+      <div>
         <div>
           <FlexRow>
             <img
               styleName="hero-image"
-              src={item.title}
+              src={item.image}
+              alt={item.title}
               role="presentation"
             />
             <div styleName="hero-image-fade" />
@@ -74,16 +75,17 @@ class WorkPage extends React.Component {
             </FlexItem>
           </FlexRow>
           <div styleName="body">
-            <div styleName="body-stripe" name="bodyStripe" />
-            <FlexRow>
-              <FlexItem size={1} offset={1}>
-                <div styleName="details" name="details">
+            <div styleName="body-stripe" name="bodyStripe">
+              <div styleName="details" name="details">
+                <div styleName="details-item">
                   <h3>
                     Year
                   </h3>
                   <p>
                     { item.year }
                   </p>
+                </div>
+                <div styleName="details-item">
                   <h3>
                     Tech
                   </h3>
@@ -91,8 +93,10 @@ class WorkPage extends React.Component {
                     { item.stack }
                   </p>
                 </div>
-              </FlexItem>
-              <FlexItem size={4}>
+              </div>
+            </div>
+            <FlexRow>
+              <FlexItem size={4} sizeSm={7} offset={2} offsetSm={0}>
                 <div styleName="description" name="description">
                   <p>
                     {item.descriptionLong}
@@ -131,7 +135,7 @@ class WorkPage extends React.Component {
             </Link>
           </footer>
         </div>
-      </ScrollArea>
+      </div>
     );
   }
 }

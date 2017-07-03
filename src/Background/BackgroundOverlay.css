@@ -9,6 +9,13 @@
   overflow: hidden;
 }
 
+@media only screen and (max-width : 768px) {
+  .background-overlay {
+    left: 0;
+  }
+}
+
+
 .panel {
   flex-grow: 2;
   border-left: solid 1px #DFE6EB;

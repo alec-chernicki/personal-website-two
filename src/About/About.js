@@ -7,6 +7,7 @@ import styles from './About.css';
 import CSSModules from 'react-css-modules';
 import connectRouteTransition from 'components/HOC/connectRouteTransition';
 import UIFadeIn from 'components/effects/UIFadeIn';
+import UIImage from 'components/image/UIImage';
 
 class About extends React.Component {
   render() {
@@ -31,10 +32,14 @@ class About extends React.Component {
 
         <div styleName="row-one">
           <FlexRow>
-            <FlexItem size={1}>
-              <img src="https://placeimg.com/200/500/any/grayscale" />
+            <FlexItem size={1} sizeSm={6}>
+              <UIImage
+                height={500}
+                heightSm={250}
+                src="https://placeimg.com/200/500/any/grayscale"
+              />
             </FlexItem>
-            <FlexItem size={2} offset={1}>
+            <FlexItem size={2} sizeSm={6} offset={1}>
               <UIFadeIn>
                 <p styleName="row-one-text">
                   I could use this section to explain how proficient I am in the
@@ -44,8 +49,8 @@ class About extends React.Component {
                 </p>
               </UIFadeIn>
             </FlexItem>
-            <FlexItem size={2} offset={1}>
-              <img
+            <FlexItem size={2} sizeSm={3} offset={1} offsetSm={4}>
+              <UIImage
                 styleName="row-one-image"
                 src="https://placeimg.com/400/550/any/grayscale"
               />
@@ -54,10 +59,12 @@ class About extends React.Component {
         </div>
 
         <FlexRow>
-          <FlexItem size={2}>
-            <img src="https://placeimg.com/400/551/any/grayscale" />
+          <FlexItem size={2} sizeSm={3}>
+            <UIImage
+              src="https://placeimg.com/400/551/any/grayscale"
+            />
           </FlexItem>
-          <FlexItem size={2} offset={1}>
+          <FlexItem size={2} sizeSm={6} offset={1} offsetSm={0}>
             <UIFadeIn>
               <h1>
                 2012
@@ -75,14 +82,14 @@ class About extends React.Component {
         <div styleName="row-three">
           <FlexRow>
             <FlexItem size={6} offset={1}>
-              <img src="https://placeimg.com/800/150/any/grayscale" />
+              <UIImage src="https://placeimg.com/800/150/any/grayscale" />
             </FlexItem>
           </FlexRow>
         </div>
 
         <div styleName="row-four">
           <FlexRow>
-            <FlexItem size={3} offset={2}>
+            <FlexItem size={3} sizeSm={6} offset={2} offsetSm={1}>
               <UIFadeIn>
                 <p>
                   I officially came out to my family, unfortunately this resulted in
@@ -98,7 +105,7 @@ class About extends React.Component {
 
         <div styleName="row-five">
           <FlexRow>
-            <FlexItem size={2} offset={1}>
+            <FlexItem size={2} sizeSm={6} offset={1} offsetSm={0}>
               <UIFadeIn>
                 <h1>
                   2013
@@ -111,18 +118,18 @@ class About extends React.Component {
                 </p>
               </UIFadeIn>
             </FlexItem>
-            <FlexItem size={3} offset={1}>
-              <img src="https://placeimg.com/800/750/any/grayscale" />
+            <FlexItem size={3} offset={1} sizeSm={5}>
+              <UIImage src="https://placeimg.com/800/750/any/grayscale" />
             </FlexItem>
           </FlexRow>
         </div>
 
         <div styleName="row-six">
           <FlexRow>
-            <FlexItem size={3}>
-                <img src="https://placeimg.com/800/700/any/grayscale" />
+            <FlexItem size={3} sizeSm={0}>
+              <UIImage src="https://placeimg.com/800/700/any/grayscale" />
             </FlexItem>
-            <FlexItem size={2} offset={1}>
+            <FlexItem size={2} offset={1} sizeSm={6}>
               <UIFadeIn>
                 <p>
                   I officially came out to my family, unfortunately this resulted in

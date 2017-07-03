@@ -2,3 +2,9 @@
   padding-left: 50px;
   overflow: hidden;
 }
+
+@media only screen and (max-width : 768px) {
+  .App {
+    padding-left: 0;
+  }
+}

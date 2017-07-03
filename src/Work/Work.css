@@ -20,6 +20,13 @@
   overflow: hidden;
 }
 
+@media only screen and (max-width : 768px) {
+  .work-item {
+    height: auto;
+    padding: 150px 15px 30px;
+  }
+}
+
 .link {
   text-decoration: none;
   overflow: hidden;

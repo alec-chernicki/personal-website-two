@@ -72,33 +72,35 @@ class Contact extends React.Component {
           </FlexItem>
         </FlexRow>
 
-        <FlexRow>
-          <FlexItem size={3} offset={1}>
-            <div styleName="form-animation">
-              <div styleName="form-container" name="formContainer">
-                <div styleName="form-wrapper" name="formWrapper">
-                  <p>
-                    Now that you know a bit about me, let's make it mutual. Whether
-                    it be personal or professional, I'd love to hear from you.
-                  </p>
-                  <ContactForm />
+        <div styleName="content">
+          <FlexRow>
+            <FlexItem size={3} sizeSm={7} offset={1} offsetSm={0}>
+              <div styleName="form-animation">
+                <div styleName="form-container" name="formContainer">
+                  <div styleName="form-wrapper" name="formWrapper">
+                    <p>
+                      Now that you know a bit about me, let's make it mutual. Whether
+                      it be personal or professional, I'd love to hear from you.
+                    </p>
+                    <ContactForm />
+                  </div>
                 </div>
               </div>
-            </div>
-          </FlexItem>
-          <FlexItem size={2}>
-            <div styleName="links-animation">
-              <div styleName="links-container" name="linksContainer">
-                <div styleName="links-wrapper"  name="linksWrapper">
-                  <h4>Find me elsewhere</h4>
-                  <ul>
-                    {this.renderLinks()}
-                  </ul>
+            </FlexItem>
+            <FlexItem size={2} sizeSm={7}>
+              <div styleName="links-animation">
+                <div styleName="links-container" name="linksContainer">
+                  <div styleName="links-wrapper"  name="linksWrapper">
+                    <h4>Find me elsewhere</h4>
+                    <ul>
+                      {this.renderLinks()}
+                    </ul>
+                  </div>
                 </div>
               </div>
-            </div>
-          </FlexItem>
-        </FlexRow>
+            </FlexItem>
+          </FlexRow>
+        </div>
         <div styleName="contact-image-wrapper">
           <div styleName="links-accent" name="linksAccent" />
           <img
