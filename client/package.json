@@ -58,9 +58,9 @@
     "whatwg-fetch": "2.0.3"
   },
   "scripts": {
-    "start": "NODE_PATH='./.node_modules' node scripts/start.js",
-    "build": "NODE_PATH='./.node_modules' node scripts/build.js && react-snapshot",
-    "test": "NODE_PATH='./.node_modules' node scripts/test.js --env=jsdom"
+    "start": "node scripts/start.js",
+    "build": "node scripts/build.js && react-snapshot",
+    "test": "node scripts/test.js --env=jsdom"
   },
   "jest": {
     "collectCoverageFrom": [
