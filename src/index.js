@@ -5,7 +5,7 @@ import {Router, browserHistory} from 'react-router';
 import routes from './config/routes';
 import registerServiceWorker from './registerServiceWorker';
 
-registerServiceWorker.register();
+registerServiceWorker();
 
 render(
   <Router history={browserHistory}>
