@@ -38,8 +38,8 @@ class Home extends React.Component {
                 <TextEffect
                   delay={0.1}
                   lines={[
-                    'One',
-                    'Two'
+                    'Alec',
+                    'Ortega'
                   ]}
                 />
               </h1>
