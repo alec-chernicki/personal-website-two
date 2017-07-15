@@ -12,7 +12,7 @@ const PalettableContent = (props) => {
   return (
     <div>
       <FlexRow>
-        <FlexItem size={5} offset={1}>
+        <FlexItem size={5} sizeSm={7} offset={1} offsetSm={0}>
           <UIFadeIn>
             <UIImage
               src={ScreenshotOne}
@@ -22,7 +22,7 @@ const PalettableContent = (props) => {
         </FlexItem>
       </FlexRow>
       <FlexRow>
-        <FlexItem size={5} offset={1}>
+        <FlexItem size={5} sizeSm={7} offset={1} offsetSm={0}>
           <UIFadeIn>
             <p>
               On initial load the client queries the /random endpoint on the server and receives a
@@ -37,14 +37,14 @@ const PalettableContent = (props) => {
         </FlexItem>
       </FlexRow>
       <FlexRow>
-        <FlexItem size={5} offset={1}>
+        <FlexItem size={5} sizeSm={7} offset={1} offsetSm={0}>
           <UIFadeIn>
             <UIImage src={ScreenshotTwo} />
           </UIFadeIn>
         </FlexItem>
       </FlexRow>
       <FlexRow>
-        <FlexItem size={5} offset={1}>
+        <FlexItem size={5} sizeSm={7} offset={1} offsetSm={0}>
           <h3>
             Featured By:
           </h3>

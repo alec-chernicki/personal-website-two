@@ -13,7 +13,7 @@ const workConfig = {
   'palettable': {
     title: 'Palettable',
     text: 'An interactive search engine for user-generated color palettes.',
-    image: 'https://unsplash.it/1200/1000/?random',
+    image: PalettableHero,
     url: '/work/palettable',
     projectUrl: 'http://www.palettable.io/',
     githubUrl: 'https://github.com/alecortega/palettable',
@@ -25,12 +25,12 @@ const workConfig = {
       tincidunt aliquet. Phasellus et purus semper, ullamcorper lectus a,
       volutpat quam. Fusce nisl ligula, sodales et nunc in, rutrum gravida
       nisl. `,
-    content: PatchPanelContent
+    content: PalettableContent
   },
   'resilient-coders': {
     title: 'Resilient Coders',
     text: 'Spreading code literacy to young people from traditionally underserved communities.',
-    image: 'https://unsplash.it/1200/1001/?random',
+    image: ResilientCodersHero,
     url: '/work/resilient-coders',
     projectUrl: 'http://www.resilientcoders.org/',
     githubUrl: 'https://github.com/alecortega/resilientcoders',
@@ -42,7 +42,7 @@ const workConfig = {
       tincidunt aliquet. Phasellus et purus semper, ullamcorper lectus a,
       volutpat quam. Fusce nisl ligula, sodales et nunc in, rutrum gravida
       nisl. `,
-    content: PatchPanelContent
+    content: ResilientCodersContent
   },
   'twitter-battle': {
     title: 'Twitter Battle',
@@ -59,12 +59,12 @@ const workConfig = {
       tincidunt aliquet. Phasellus et purus semper, ullamcorper lectus a,
       volutpat quam. Fusce nisl ligula, sodales et nunc in, rutrum gravida
       nisl. `,
-    content: PatchPanelContent
+    content: TwitterBattleContent
   },
   'patch-panel': {
     title: 'Patch Panel',
     text: 'Makes responsive grid and panel layouts possible.',
-    image: 'https://unsplash.it/1200/1003/?random',
+    image: PatchPanelHero,
     url: '/work/patch-panel',
     projectUrl: 'http://patchpanel.alecortega.com/',
     githubUrl: 'https://github.com/alecortega/patch-panel',

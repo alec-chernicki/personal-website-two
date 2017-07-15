@@ -11,19 +11,19 @@ const Content = (props) => {
   return (
     <div>
       <FlexRow>
-        <FlexItem size={5} offset={1}>
+        <FlexItem size={5} sizeSm={7} offset={1} offsetSm={0}>
           <UIFadeIn>
-            <UIImage src={ScreenshotOne} />
+            <UIImage translucent={true} src={ScreenshotOne} />
           </UIFadeIn>
         </FlexItem>
       </FlexRow>
 
       <FlexRow>
-        <FlexItem size={5} offset={1}>
+        <FlexItem size={5} sizeSm={7} offset={1} offsetSm={0}>
           <UIFadeIn>
             <p>
               I took on the re-design and development of the new Resilient Coders
-              website in hopes of 
+              website in hopes of
             </p>
             <p>
               While the user goes through the tutorial, the keyboard events are conditionally
@@ -33,12 +33,6 @@ const Content = (props) => {
           </UIFadeIn>
         </FlexItem>
       </FlexRow>
-      {/*
-        <FlexRow>
-        <FlexItem size={5} offset={1}>
-          <img src={ScreenshotTwo} />
-        </FlexItem>
-      </FlexRow> */}
     </div>
   )
 }

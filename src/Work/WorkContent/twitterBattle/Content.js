@@ -12,15 +12,15 @@ const Content = (props) => {
   return (
     <div>
       <FlexRow>
-        <FlexItem size={5} offset={1}>
+        <FlexItem size={5} sizeSm={7} offset={1} offsetSm={0}>
           <UIFadeIn>
-            <UIImage src={ScreenshotOne} />
+            <UIImage translucent={true} src={ScreenshotOne} />
           </UIFadeIn>
         </FlexItem>
       </FlexRow>
 
       <FlexRow>
-        <FlexItem size={5} offset={1}>
+        <FlexItem size={5} sizeSm={7} offset={1} offsetSm={0}>
           <UIFadeIn>
             <p>
               On initial load the client queries the /random endpoint on the server and receives a
@@ -36,9 +36,9 @@ const Content = (props) => {
       </FlexRow>
 
       <FlexRow>
-        <FlexItem size={5} offset={1}>
+        <FlexItem size={5} sizeSm={7} offset={1} offsetSm={0}>
           <UIFadeIn>
-            <UIImage src={ScreenshotTwo} />
+            <UIImage  translucent={true} src={ScreenshotTwo} />
           </UIFadeIn>
         </FlexItem>
       </FlexRow>

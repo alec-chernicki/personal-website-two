@@ -13,14 +13,14 @@ class UIImage extends React.Component {
   }
   renderImage() {
     const { translucent, alt, src, styles } = this.props;
-    const imageClass = classNames('image', {
-      translucent,
+    const imageClasses = classNames(styles['image'], {
+      [styles['translucent']]: translucent === true,
     });
-    
+
     return (
       <img
         src={src}
-        className={styles[imageClass]}
+        className={imageClasses}
         alt={alt}
       />
     );
