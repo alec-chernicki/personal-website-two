@@ -1,8 +1,15 @@
 {
-  "name": "personal-website-frontend",
+  "name": "client",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:3001/",
+  "proxy": {
+    "/api": {
+      "target": "http://localhost:3001",
+      "pathRewrite": {
+        "^/api/": "/"
+      }
+    }
+  },
   "dependencies": {
     "autoprefixer": "7.1.1",
     "axios": "^0.16.2",
