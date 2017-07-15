@@ -75,7 +75,7 @@ class Work extends React.Component {
           <Link to={item.url} className={styles['link']}>
             <div className={styles['work-item']} name="workItem">
               <img
-                alt={item.title}
+                role="presentation"
                 className={this.props.styles['image']} style={{backgroundImage: `url(${item.image})`}}
               />
               <div className={styles['text']}>
