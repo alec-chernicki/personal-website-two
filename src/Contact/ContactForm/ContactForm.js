@@ -3,11 +3,11 @@ import Button from '../../components/Button/Button';
 import styles from './ContactForm.css';
 import CSSModules from 'react-css-modules';
 import { Form, Text, Textarea } from 'react-form';
-import { contactFormUrl } from 'constants/links';
+import { CONTACT_FORM } from 'constants/links';
 import axios from 'axios';
 
 const _onSubmit = (values) => {
-  axios.post(contactFormUrl, values).then((response) => {
+  axios.post(CONTACT_FORM, values).then((response) => {
     console.log(response);
   })
 };
