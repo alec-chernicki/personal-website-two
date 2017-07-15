@@ -5,6 +5,7 @@ import CSSModules from 'react-css-modules';
 import { Form, Text, Textarea } from 'react-form';
 
 const _onSubmit = (values) => {
+  debugger
   console.log('submitted:', values);
 };
 
