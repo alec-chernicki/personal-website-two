@@ -3,10 +3,13 @@ import Button from '../../components/Button/Button';
 import styles from './ContactForm.css';
 import CSSModules from 'react-css-modules';
 import { Form, Text, Textarea } from 'react-form';
+import { contactFormUrl } from 'constants/links';
+import axios from 'axios';
 
 const _onSubmit = (values) => {
-  debugger
-  console.log('submitted:', values);
+  axios.post(contactFormUrl, values).then((response) => {
+    console.log(response);
+  })
 };
 
 const _validate = ({name, email, message}) => {
