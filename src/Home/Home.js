@@ -15,8 +15,8 @@ const _enterAnimation = ({ target, options }) => {
   const heroButtons = target.find({ name: 'heroButtons' });
 
   const tl = new TimelineMax()
-    .from(heroAccent, 0.6, {x: '-100%', ease: Power1.easeOut}, ENTER_ANIMATION_TIME)
-    .from(heroButtons, 0.4, {opacity: 0, y: '100%', ease: Power1.easeOut});
+    // .from(heroAccent, 0.6, {x: '-100%', ease: Power1.easeOut}, ENTER_ANIMATION_TIME)
+    // .from(heroButtons, 0.4, {opacity: 0, y: '100%', ease: Power1.easeOut});
 
   return tl;
 };
@@ -67,7 +67,6 @@ class Home extends React.Component {
           <img
             alt="Alec Ortega"
             styleName="hero-image"
-            name="heroImage"
             src="https://unsplash.it/1200/1001/?random"
           />
         </div>

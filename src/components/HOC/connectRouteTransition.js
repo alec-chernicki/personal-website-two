@@ -1,5 +1,5 @@
 import React from 'react';
-import {TimelineMax, Linear} from 'gsap';
+import {TimelineMax, Power1} from 'gsap';
 import GSAP from 'react-gsap-enhancer';
 import {
   ENTER_TIME_IN_SECONDS,
@@ -8,19 +8,21 @@ import {
 
 const _enterAnimation = ({ target, options }) => {
   return new TimelineMax()
-    .from(target, 0.01, { display: 'none' }, EXIT_TIME_IN_SECONDS)
-    .from(target, ENTER_TIME_IN_SECONDS, {
-      opacity: 0,
-      ease: Linear.easeNone,
-      onComplete: options.callback
-    });
+    .from(target, ENTER_TIME_IN_SECONDS,
+      {
+        display: 'none',
+        opacity: 0,
+        ease: Power1.easeInOut,
+        onComplete: options.callback
+    }, EXIT_TIME_IN_SECONDS);
 };
 
 const _exitAnimation = ({ target, options }) => {
   return new TimelineMax()
     .to(target, ENTER_TIME_IN_SECONDS, {
+      display: 'none',
       opacity: 0,
-      ease: Linear.easeNone,
+      ease: Power1.easeInOut,
       onComplete: options.callback
     });
 };
