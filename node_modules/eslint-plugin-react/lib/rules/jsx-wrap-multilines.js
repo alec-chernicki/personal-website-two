@@ -4,6 +4,8 @@
  */
 'use strict';
 
+var has = require('has');
+
 // ------------------------------------------------------------------------------
 // Constants
 // ------------------------------------------------------------------------------
@@ -11,7 +13,8 @@
 var DEFAULTS = {
   declaration: true,
   assignment: true,
-  return: true
+  return: true,
+  arrow: true
 };
 
 // ------------------------------------------------------------------------------
@@ -37,6 +40,9 @@ module.exports = {
           type: 'boolean'
         },
         return: {
+          type: 'boolean'
+        },
+        arrow: {
           type: 'boolean'
         }
       },
@@ -71,7 +77,7 @@ module.exports = {
           node: node,
           message: 'Missing parentheses around multilines JSX',
           fix: function(fixer) {
-            return fixer.replaceText(node, '(' + sourceCode.getText(node) + ')');
+            return fixer.replaceText(node, `(${sourceCode.getText(node)})`);
           }
         });
       }
@@ -79,7 +85,7 @@ module.exports = {
 
     function isEnabled(type) {
       var userOptions = context.options[0] || {};
-      if (({}).hasOwnProperty.call(userOptions, type)) {
+      if (has(userOptions, type)) {
         return userOptions[type];
       }
       return DEFAULTS[type];
@@ -118,6 +124,14 @@ module.exports = {
       ReturnStatement: function(node) {
         if (isEnabled('return')) {
           check(node.argument);
+        }
+      },
+
+      'ArrowFunctionExpression:exit': function (node) {
+        var arrowBody = node.body;
+
+        if (isEnabled('arrow') && arrowBody.type !== 'BlockStatement') {
+          check(arrowBody);
         }
       }
     };

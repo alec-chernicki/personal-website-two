@@ -4,6 +4,8 @@
  */
 'use strict';
 
+var has = require('has');
+
 // ------------------------------------------------------------------------------
 // Rule Definition
 // ------------------------------------------------------------------------------
@@ -70,16 +72,16 @@ module.exports = {
       options.selfClosing = config;
     } else if (typeof config === 'object') {
       // [1, {location: 'something'}] (back-compat)
-      if (config.hasOwnProperty('location')) {
+      if (has(config, 'location')) {
         options.nonEmpty = config.location;
         options.selfClosing = config.location;
       }
       // [1, {nonEmpty: 'something'}]
-      if (config.hasOwnProperty('nonEmpty')) {
+      if (has(config, 'nonEmpty')) {
         options.nonEmpty = config.nonEmpty;
       }
       // [1, {selfClosing: 'something'}]
-      if (config.hasOwnProperty('selfClosing')) {
+      if (has(config, 'selfClosing')) {
         options.selfClosing = config.selfClosing;
       }
     }
@@ -246,8 +248,7 @@ module.exports = {
         if (correctColumn !== null) {
           expectedNextLine = tokens.lastProp &&
             (tokens.lastProp.lastLine === tokens.closing.line);
-          data.details = ' (expected column ' + (correctColumn + 1) +
-            (expectedNextLine ? ' on the next line)' : ')');
+          data.details = ` (expected column ${correctColumn + 1}${expectedNextLine ? ' on the next line)' : ')'}`;
         }
 
         context.report({
@@ -272,7 +273,7 @@ module.exports = {
               case 'tag-aligned':
               case 'line-aligned':
                 return fixer.replaceTextRange([cachedLastAttributeEndPos, node.end],
-                  '\n' + getIndentation(tokens, expectedLocation, correctColumn) + closingTag);
+                  `\n${getIndentation(tokens, expectedLocation, correctColumn)}${closingTag}`);
               default:
                 return true;
             }
